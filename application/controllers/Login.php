@@ -40,7 +40,7 @@ class Login extends CI_Controller {
 			}else{
 				$result = $query['data']->row();
 
-				//Monta o ar
+				//Monta o array de informações do usuario
 				$session = array(
 			        'email'  	=> $result->email,
 			        'name'   	=> $result->name,

@@ -56,3 +56,4 @@ $route['translate_uri_dashes'] = FALSE;
 
 $route['registrar_usuario'] = 'user/create';
 $route['home']				= 'home';
+$route['nova_compra']		= 'sale/new_sale';

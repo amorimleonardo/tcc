@@ -1,0 +1,100 @@
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */ 
+
+html, body{
+	height: 100%;
+	color: #ffffff;
+	text-align: center;
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: normal;
+	line-height: normal;
+	font-size: 13px;
+	padding: 0px;
+	background-color: #00b2af;
+}
+div{
+	height: 100%;
+}
+input{
+	border-style: none;
+}
+h1{
+	font-size: 30px;
+}
+a {
+	color: #ffffff;
+}
+	a:hover {
+		color: #ffffff;
+		text-decoration: none;
+	}
+.navbar a {
+	color: #ffffff;
+}
+.background_app{ 
+	background-color: #00b2af;
+}
+.icon_app{
+	font-size: 30px;
+	margin-top: 30px;
+	margin-bottom: 50px;
+}
+form{
+	color: #000000;
+	position: relative;
+	display: block;
+}
+	form input{
+		width: 70%;
+		padding: 10px;
+		margin-bottom: 5px;
+		border-radius: 5px;
+	}
+	form button{
+		width: 70%;
+		margin-top: 10px;
+		padding: 10px;
+	}
+.no_account{
+	display: block;
+	text-align: left;
+	width: 70%;
+	margin: 0 auto;
+}
+.botoes{
+	position: relative;
+	display: block;
+	border-style: none;
+	width: 70%;
+	background-color: #FF473A;
+	padding: 10px;
+	margin: 40px auto 10px;
+	color: #ffffff;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+footer{
+	position: relative;
+	bottom: 70px;
+	margin-top: 30px;
+	padding: 10px;
+	text-align: right;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

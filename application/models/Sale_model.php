@@ -1,5 +1,5 @@
 <?php
-class User_model extends CI_Model {
+class Sale_model extends CI_Model {
 
     public function __construct()
     {
@@ -32,9 +32,9 @@ class User_model extends CI_Model {
 	    return $this->db->insert('users', $data);
 	}
 
-	public function check_login($email, $password)
+	public function check_login($username, $password)
 	{
-        $this->db->where('users.email = "' . $email . '"');
+        $this->db->where('users.email = "' . $username . '"');
         $query = $this->db->get('users');
 
         if ($query->num_rows() > 0) {

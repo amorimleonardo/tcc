@@ -6,9 +6,14 @@ class User extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
-        $this->load->model('user_model'); //Carrega model
+		//Carrega model
+        $this->load->model('user_model');
 
-        $this->load->library('form_validation'); //Carrega biblioteca validação de formulário
+        //Carrega bibliotecas necessárias
+        $this->load->library('form_validation');
+
+        //Carrega helpers
+		$this->load->helper('url');
 	}
 
 	// public function index()
@@ -36,7 +41,8 @@ class User extends CI_Controller {
 		}else{
 
 			$this->user_model->set_user();
-			$this->load->view('login');
+			
+			redirect(base_url().'index.php/login/');
 
 		}
 	}
