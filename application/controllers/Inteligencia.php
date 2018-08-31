@@ -7,16 +7,18 @@ class Inteligencia extends CI_Controller {
 	{
 		parent::__construct();
 
-        $this->load->library('php-ml/Intelligence');
-        $this->Intelligence = new Intelligence();
+        $this->load->library('php-ml-master/Intelligence');
+        $this->Intelligence = new Intelligence;
 	}
 
-	public function index()
+	public function predicao()
 	{
 		$quantity = [[1], [2], [3], [4], [5]];
 		$date = [1369526400, 1372204800, 1374796800, 1377475200, 1380153600];
 
-		echo $this->Intelligence->predicao($quantity, $date);exit();
+		$prox_compra = $this->Intelligence->predicao($quantity, $date);
+		echo 'Return: '.date('Y-m-d', $prox_compra);
+		exit();
 
 		$this->load->view('header');
 		$this->load->view('home');

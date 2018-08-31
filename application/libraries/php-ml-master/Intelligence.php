@@ -3,17 +3,12 @@
 * 
 */
 
-namespace PhpmlExamples;
-include 'vendor/autoload.php';
+// namespace PhpmlExamples;
+require_once 'vendor/autoload.php';
 use Phpml\Regression\LeastSquares;
 
 class Intelligence
 {
-	public function __construct()
-	{
-		parent::__construct();
-	}
-
 	public function predicao($quatity = array(), $date = array())
 	{
 		$samples = $quatity;
