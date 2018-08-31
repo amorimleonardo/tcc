@@ -17,7 +17,7 @@ class Sale extends CI_Controller {
 	{
 		$this->form_validation->set_rules('product_name', 'Nome do produto', 'required');
 		$this->form_validation->set_rules('valid_date', 'Data de validade', 'required');
-		$this->form_validation->set_rules('qtd', 'Quantidade', 'required');
+		// $this->form_validation->set_rules('qtd', 'Quantidade', 'required');
 
 		if($this->form_validation->run() === FALSE){
 			
@@ -27,6 +27,7 @@ class Sale extends CI_Controller {
 
 		}else{
 			$params = $this->input->post();
+			echo "<pre>";print_r($params);exit();
 			$this->sale_model->set();
 		}
 
