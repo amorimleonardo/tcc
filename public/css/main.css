@@ -19,7 +19,7 @@ html, body{
 div{
 	height: 100%;
 }
-input{
+input, select{
 	border-style: none;
 }
 h1{
@@ -48,7 +48,7 @@ form{
 	position: relative;
 	display: block;
 }
-	form input{
+	form input, select{
 		width: 70%;
 		padding: 10px;
 		margin-bottom: 5px;

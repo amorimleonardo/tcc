@@ -11,11 +11,11 @@ class User_model extends CI_Model {
 	{
         if ($id === FALSE && $params = array())
         {
-            $query = $this->db->get('users');
+            $query = $this->db->get('usuario');
             return $query->result_array();
         }
 
-        $query = $this->db->get_where('users', array('id' => $id));
+        $query = $this->db->get_where('usuarios', array('id' => $id));
         return $query->row_array();
 	}
 
@@ -29,13 +29,13 @@ class User_model extends CI_Model {
 	        'dt_nasc' 	=> $this->input->post('dt_nasc')
 	    );
 
-	    return $this->db->insert('users', $data);
+	    return $this->db->insert('usuarios', $data);
 	}
 
 	public function check_login($email, $password)
 	{
-        $this->db->where('users.email = "' . $email . '"');
-        $query = $this->db->get('users');
+        $this->db->where('usuarios.email = "' . $email . '"');
+        $query = $this->db->get('usuarios');
 
         if ($query->num_rows() > 0) {
             //Recupera a senha do usuario

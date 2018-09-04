@@ -58,3 +58,4 @@ $route['registrar_usuario'] = 'user/create';
 $route['home']				= 'home';
 $route['nova_compra']		= 'sale/new_sale';
 $route['inteligente']		= 'inteligencia/index';
+$route['historico']			= 'sale/sale_history';
