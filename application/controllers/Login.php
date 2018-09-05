@@ -7,7 +7,7 @@ class Login extends CI_Controller {
 	{
 		parent::__construct();
 		//Carrega models
-		$this->load->model('user_model'); 
+		$this->load->model('user_model');
 
 		//Carrega bibliotecas necessárias
 		$this->load->library('form_validation');
@@ -52,5 +52,14 @@ class Login extends CI_Controller {
 				redirect(base_url().'index.php/home/');
 			}
 		}
+	}
+
+	public function check_logged(){
+		if ($this->session->userdata('logged')) {
+			return true;
+		}else {
+            // Redireciona para tela de login
+            redirect(base_url().'index.php/login/');
+        }
 	}
 }

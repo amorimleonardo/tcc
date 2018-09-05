@@ -10,6 +10,8 @@ class Home extends CI_Controller {
 
 	public function index()
 	{
+		$this->login->check_logged();
+
 		$this->load->view('header');
 		$this->load->view('home');
 		$this->load->view('footer');

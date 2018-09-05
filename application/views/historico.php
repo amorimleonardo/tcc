@@ -1,5 +1,8 @@
 <h1>Histórico</h1>
 <br><br>
-<? foreach ($variable as $key => $value) { ?>
-	# code...
-<? } ?>
+<?
+if(isset($list)){
+	foreach ($list as $key => $value) {
+		echo $value->nome.' - '.$value->preco_custo.'<br>';
+	}
+} ?>

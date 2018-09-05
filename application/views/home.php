@@ -3,4 +3,4 @@
 <br>
 <br>
 <br>
-<a class="botoes" href="<?=base_url()?>index.php/historico"><i class="fa fa-file-text-o fa-lg" aria-hidden="true"></i> Histórico</a>
+<a class="botoes" href="<?=base_url()?>index.php/historico/<?=$this->session->userdata('id')?>"><i class="fa fa-file-text-o fa-lg" aria-hidden="true"></i> Histórico</a>
