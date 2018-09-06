@@ -9,16 +9,18 @@ class Sale extends CI_Controller {
 		//Carrega model
 		$this->load->model('compra_model');
 		$this->load->model('produto_model');
-		$this->load->model('login');
 
 		//Carrega bibliotecas
 		$this->load->library('form_validation');
 		$this->load->library('session');
+
+		$this->load->library('Logins');
+		$this->Logins = new Logins;
 	}
 
 	public function new_sale()
 	{
-		$this->login->check_logged();
+		$this->Logins->check_logged();
 
 		$this->form_validation->set_rules('id_produto', 'Nome do produto', 'required');
 		$this->form_validation->set_rules('data_compra', 'Data da compra', 'required');
@@ -50,6 +52,8 @@ class Sale extends CI_Controller {
 
 	public function sale_history($id_user = '')
 	{
+		$this->Logins->check_logged();
+
 		$compras = $this->compra_model->get(null, array('conditions' => 'id_user = '.$id_user, 'join' => array('produto')));
 
 		if($compras->num_rows() > 0){

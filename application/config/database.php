@@ -75,9 +75,9 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'localhost',
+	'hostname' => 'tcccompras.cpurqzhehgcd.sa-east-1.rds.amazonaws.com',
 	'username' => 'root',
-	'password' => '',
+	'password' => 'amorim987646*',
 	'database' => 'tcc',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
